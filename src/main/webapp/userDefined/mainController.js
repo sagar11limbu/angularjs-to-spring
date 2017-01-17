@@ -1,7 +1,8 @@
+var app = angular.module('myApp',[]);
+
 app.controller('myCtrl',['$scope','dataService',function($scope,dataService){
-	init();
 	$scope.user={id:1,username:'',email:'',password:''};
-	$scope.submitData = function(){
+	$scope.submitData = function(user){
 		dataService.addUser(user);
 	}
 }]);
